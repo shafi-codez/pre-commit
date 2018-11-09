@@ -7,3 +7,10 @@ Install pre commit
 or
 
 ```brew install pre-commit```
+
+Add 
+vi .git/hooks/pre-commit
+pip install pre-commit-hooks
+pre-commit run --all-files
+
+git commit -m "Text"
