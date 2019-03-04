@@ -11,6 +11,14 @@ repos:
     -   id: requirements-txt-fixer
     -   id: check-yaml
     -   id: flake8
+    -   id: sort-simple-yaml
+    -   id: check-executables-have-shebangs
+    -   id: detect-aws-credentials
+    -   id: debug-statements
+    -   id: check-xml
+    -   id: check-symlinks
+    -   id: check-merge-conflict
+    -   id: pretty-format-json --autofix --indent 4
 -   repo: https://github.com/pre-commit/pre-commit
     rev: v1.7.0
     hooks:
@@ -28,3 +36,10 @@ repos:
     rev: v0.6.4
     hooks:
     -   id: add-trailing-comma
+-   repo: https://github.com/Lucas-C/pre-commit-hooks
+    hooks:
+    -   id: check-bash-syntax
+        name: Check Shell scripts syntax corectness
+        language: system
+        entry: bash -n
+        files: \.sh$
